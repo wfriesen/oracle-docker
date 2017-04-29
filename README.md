@@ -41,7 +41,7 @@ The new base size will only be picked up by images created after the change, so 
 
 ## Building
 
-After pulling the images from [container-registry.oracle.com](container-registry.oracle.com), the image in this repository must be built with a larger shm-size (4GB minimum, but the larger the better). From the root of this repository run:
+After pulling the images from [container-registry.oracle.com](https://container-registry.oracle.com), the image in this repository must be built with a larger shm-size (4GB minimum, but the larger the better). From the root of this repository run:
 
 `docker build installoracle --shm-size="4g" -t oracle:installed`
 
