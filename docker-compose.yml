@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  db:
+    image: oracle:installed
+    ports:
+     - 1521:1521
+    shm_size: 4g
