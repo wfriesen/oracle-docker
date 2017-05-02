@@ -1,4 +1,4 @@
-FROM container-registry.oracle.com/database/standard
+FROM container-registry.oracle.com/database/enterprise
 COPY ./scripts /scripts
 RUN sed -i -e '/^# keep container runing$/,$d' /home/oracle/setup/dockerInit.sh \
   && /home/oracle/setup/dockerInit.sh \

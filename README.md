@@ -5,11 +5,13 @@ Before downloading any images from their registry you must first sign in and agr
 
 These images are fairly large, and the Oracle Container Registry can be unfairly slow, so after the initial download I would recommend doing a `docker save` and storing a copy somewhere local.
 
-Currently builds images for this version:
+Builds images for this version:
+
+- Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+
+But also tested against:
 
 - Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production
-
-Changing the `FROM` line in the Dockerfile should work against the other images.
 
 The images provided by Oracle will first perform an installation, taking around 10 minutes, and then `tail -f` the log file to keep the container running.
 This Dockerfile does only the installation and then exits, providing a stable base image to build upon, that doesn't require re-installation when being destroyed/re-created.
